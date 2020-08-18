@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProductActivity">
+
+    <TextView
+        android:id="@+id/login_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前的登录状态为" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tryToBuy"
+        android:text="尝试跳转到购买界面" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeLoginState"
+        android:text="修改登录状态" />
+
+</LinearLayout>

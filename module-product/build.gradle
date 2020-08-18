@@ -1,0 +1,37 @@
+apply from: (rootProject.file("module_config.gradle"))
+
+//String url = rootProject.file("module_config.gradle")
+//println("url = " + url)
+//String u = "../module_config.gradle"
+//println("u = " + u)
+
+//class TestPlugin implements Plugin<Project> {
+//
+//    @Override
+//    void apply(Project project) {
+//        project.task('apkdist') {
+//            println 'hello, world!'
+//
+//            def closure = project['apkdistconf'].nameMap;
+////            closure('wow!');
+//
+//            println project['apkdistconf'].destDir
+//        }
+//    }
+//}
+//
+//apply plugin: TestPlugin
+//
+//apkdistconf {
+//    nameMap { name ->
+//        println 'hello, ' + name
+//        return name
+//    }
+//    destDir 'your-distribution-directory'
+//}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    api project(path: ':aop-library')
+}

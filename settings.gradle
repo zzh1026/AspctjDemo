@@ -1,0 +1,6 @@
+include ':module-login'
+include ':module-product'
+include ':base-library'
+include ':aop-library'
+include ':app'
+rootProject.name = "AopDemo"

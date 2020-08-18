@@ -1,0 +1,18 @@
+/**
+ *  使用aspectjx的plugin配置,在app的gradle中引用, 主要是为了分开文件,当未来取消的时候直接取消引用即可
+ *  https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
+ *
+ *  在app项目的build.gradle里应用插件
+ *  apply plugin: 'android-aspectjx'
+ *  //或者这样也可以
+ *  apply plugin: 'com.hujiang.android-aspectjx'
+ */
+apply plugin: 'com.hujiang.android-aspectjx'
+
+aspectjx {
+    //排除所有package路径中包含`android.support`的class文件及库（jar文件）
+    enabled true
+    exclude 'com.google','com.taobao'
+    //排除所有package路径中包含`android.support`的class文件及库（jar文件）
+    exclude 'androidx.*'
+}

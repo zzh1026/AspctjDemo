@@ -1,0 +1,9 @@
+apply from: (rootProject.file("module_config.gradle"))
+
+//apply plugin:'com.zzh.firstplugin'
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    api project(path: ':aop-library')
+}

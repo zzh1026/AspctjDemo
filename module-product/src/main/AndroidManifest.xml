@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zzh.product">
+
+    <application>
+        <activity
+            android:name=".ProductActivity"
+            android:label="商品界面"></activity>
+    </application>
+
+</manifest>
