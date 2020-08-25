@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.zzh.aop.aspectannotation.AutoLog;
 import com.zzh.aop.aspectannotation.NeedLogin;
 import com.zzh.aopdemo.databinding.ActivityMainBinding;
 import com.zzh.base._Login;
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         RouterJumpUtils.navigation(ConstantRouter.PRODUCT.PRODUCT_HOME);
     }
 
+    @AutoLog
     public void changeLoginState(View view) {
         _Login.isLogin = !_Login.isLogin;
         mBinding.loginStateTv.setText("当前的登录状态为: " + _Login.isLogin);
